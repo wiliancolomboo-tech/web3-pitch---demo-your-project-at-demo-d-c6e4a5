@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  tryzub-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tryzub_stream_worker
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - SOLANA_WSS_URL=wss://api.devnet.solana.com
+      - PROGRAM_ID=Tryzub1111111111111111111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - AUDIT_EMAIL=${AUDIT_EMAIL:-ops@kyiv.reconstruct.ua}
+      - ENTERPRISE_WEBHOOK_URL=${ENTERPRISE_WEBHOOK_URL}
+      - LOG_LEVEL=info
+    healthcheck:
+      test: ["CMD-SHELL", "node -e 'process.exit(0)'"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"

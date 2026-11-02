@@ -1,0 +1,8 @@
+{
+  "status": "healthy",
+  "protocol": "KLYUCH-v2",
+  "network": "solana-devnet",
+  "active_streams_monitored": 14,
+  "deadman_monitoring": "nominal",
+  "last_slot_indexed": 298410291
+}

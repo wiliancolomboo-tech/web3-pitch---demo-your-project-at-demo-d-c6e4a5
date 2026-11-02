@@ -1,0 +1,5 @@
+Check our open-source codebase & live demo deployed on Solana Devnet:
+🔗 GitHub: github.com/vartaguard/solana-core
+📊 Program ID: Vartad78D32ZfNqC8HnFjK6vXw8jF2b2vP9kL2m1yZ7
+
+Building resilient decentralized financial infrastructure from Kyiv to the world. Let’s build the future together! 🇺🇦🛡️ #Solana #KyivDemoDay #Web3

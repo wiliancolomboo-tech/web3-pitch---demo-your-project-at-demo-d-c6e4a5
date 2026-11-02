@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  volia-relayer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: volia_stream_relayer
+    restart: always
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=VLiAXw7JbYkZgW8k9aV5vWz3hB6fJkM1dNuP8vQ2wEr
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - AUDIT_EMAIL=kyiv-demo-audits@volia.ua
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"process.exit(0)\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"

@@ -1,0 +1,2 @@
+### 6.3 Operational Runbook & Healthcheck Implementation
+Incorporate the micro-healthcheck endpoint inside `sentinel_agent.ts`:

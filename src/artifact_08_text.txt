@@ -1,0 +1,15 @@
+1/3 🇺🇦 Live from Kyiv Demo Day: Introducing KyivSentry — the high-velocity, non-custodial milestone disbursement engine built on @Solana. 
+
+Millions in cross-border reconstruction capital flow into Ukraine, but traditional wire rails bleed 15%+ to fees and opaque delays. We fixed this. ⚡
+
+2/3 🛠️ How it works:
+• Dual-quorum Ed25519 cryptographic field attestations
+• Sub-second milestone streaming directly to vetted frontline contractors via SPL-vault PDAs
+• Real-time emergency circuit breakers & enterprise @resend receipt dispatches
+
+Auditable. Slashing-resistant. Zero downtime.
+
+3/3 🚀 Tested, dockerized, and live on Solana Devnet today. Code is 100% open-source for public good and sovereign reconstruction.
+
+Check out our full live demo & repo: github.com/solana-kyiv/kyiv-sentry
+Special thanks to the Kyiv Demo Day team for empowering the next generation of builders! 🇺🇦🛡️ #Solana #KyivTech #Web3Aid

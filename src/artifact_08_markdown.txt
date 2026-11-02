@@ -1,0 +1,9 @@
+1/3 🇺🇦 Proud to present @VolyaStream live at Demo Day in Kyiv! Built natively on @solana, VolyaStream solves the single biggest bottleneck in international reconstruction and dual-use tech funding: transparent, milestone-locked capital streaming. No middlemen. Sub-second execution. ⚡️
+
+2/3 🛠 Under the hood:
+✅ Non-custodial PDA escrow vaults
+✅ Linear per-second disbursement triggered by threshold cryptographic attestations
+✅ Instant enterprise notifications via @resend and Slack webhooks
+✅ Real-time audit trails with clawback protections for sovereign donors.
+
+3/3 🚀 Rebuilding sovereign nations requires sovereign financial rails. Solana's 400ms finality and microcent fees make programmable institutional capital deployment possible today. Try our Devnet demo & read the open-source code: https://github.com/volyastream/volyastream-core #Solana #KyivTech #KyivDemoDay #BuildOnSolana 🇺🇦🛡️

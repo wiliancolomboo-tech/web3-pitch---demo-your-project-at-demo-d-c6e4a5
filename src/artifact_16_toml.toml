@@ -1,0 +1,26 @@
+[toolchain]
+anchor_version = "0.30.1"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+kyivshield = "KSHLD42N1mQcEsqDpz3Q8BfVjN5a92yU1K9vB74yXg9"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-node tests/kyivshield.ts"
+
+[test]
+startup_wait = 5000
+
+# Clone Pyth Receiver Program into Localnet for realistic testing
+[[test.validator.clone]]
+address = "rec5EKMGg6vTXvhjh4qdJmxu4ndEEwoQipVK2rewN13"

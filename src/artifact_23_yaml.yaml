@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  trident-relay:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trident-stream-relay
+    restart: unless-stopped
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - SOLANA_WS_URL=wss://api.devnet.solana.com
+      - PROGRAM_ID=Tr1dEntStrEamKy1v111111111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - AUDIT_EMAIL=kyiv-demo-auditor@mesh.ua
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"

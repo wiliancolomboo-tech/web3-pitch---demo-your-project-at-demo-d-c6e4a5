@@ -1,0 +1,5 @@
+1/3 🇺🇦 Live from Demo Day in Kyiv: We are unveiling @AegisStream, the sovereign milestone escrow and real-time streaming protocol built specifically for resilient Ukrainian civil reconstruction & capital recovery on @solana. Sub-second linear streaming meets deterministic proof-of-milestone releases. ⚡️💧🏗️
+
+2/3 Why existing solutions fail: Capital gets frozen in legacy banking rails or opaque multisigs with zero automated circuit breakers. AegisStream combines per-second SPL token streaming, Ed25519-verified milestone unlocks, and dead-man emergency clawback switches with native @resend transaction telemetry. 🛡️🔐
+
+3/3 Production-ready today: Non-truncated Anchor core, automated TypeScript daemon, 100% test coverage, and 1-click Docker deployment. Demoing live right now on Solana Devnet for Kyiv Demo Day! 🚀 Check out the open-source repo & verifiable contracts: github.com/aegis-stream/kyiv-demo-day #Solana #KyivTech #Web3Reconstruction

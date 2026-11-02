@@ -1,0 +1,11 @@
+GET /healthz
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "status": "healthy",
+  "network": "solana-devnet",
+  "program_id": "Tr1dentF1ow111111111111111111111111111111111",
+  "slot_latency": 1,
+  "queue_depth": 0
+}

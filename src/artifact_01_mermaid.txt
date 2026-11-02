@@ -1,0 +1,27 @@
+flowchart TD
+    subgraph Enterprise Operator & Signers
+        EO[Primary Treasury Admin] -->|Heartbeat Ping / Ed25519 Tx| RPC[Solana Mainnet/Devnet RPC]
+        CW[Beneficiaries / Contributor Wallets] -->|Claim Vested Streaming Balance| RPC
+        BC[Backup Contingency Keys] -.->|Failover Claim after Delta T| RPC
+    end
+
+    subgraph Solana Runtime [Volia Protocol On-Chain Anchor Program]
+        RPC -->|Instruction Routing| Router[Program Instruction Dispatcher]
+        
+        Router -->|initialize_vault| TV[Treasury Vault PDA & Token Account]
+        Router -->|record_heartbeat| HB[Heartbeat State Machine PDA]
+        Router -->|stream_funds| SM[Vesting & Stream Math Core Engine]
+        Router -->|trigger_contingency| CT[Failover Arbiter State]
+        
+        HB -->|Check: Current Slot > Last Heartbeat + Timeout| CT
+        TV -->|SPL Transfer CPI| CW
+        CT -->|Emergency Evacuation CPI| EV[Contingency Multi-Sig Vault PDA]
+    end
+
+    subgraph Off-Chain Daemon & Automation Relay
+        Agent[Volia Enterprise Keeper Daemon] -->|Poll Cluster Slot & Vault Status| RPC
+        Agent -->|Detect Pending Timeout Threshold| AlertEng[Alerting Dispatch Engine]
+        AlertEng -->|Dispatch Webhook| Resend[Resend API: Critical Security Alert]
+        AlertEng -->|Dispatch Webhook| Webhook[Slack / Discord / Matrix Incident Ops]
+        Agent -->|Auto-Execute Heartbeat if Signer Online| RPC
+    end

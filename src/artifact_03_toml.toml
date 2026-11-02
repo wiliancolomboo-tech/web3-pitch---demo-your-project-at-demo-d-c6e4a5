@@ -1,0 +1,21 @@
+[package]
+name = "volia_stream"
+version = "0.1.0"
+description = "Verifiable Streaming Treasury & Milestone Escrow Protocol on Solana"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "volia_stream"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+solana-program = "1.17.0"

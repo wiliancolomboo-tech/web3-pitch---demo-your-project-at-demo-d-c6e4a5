@@ -1,0 +1,1 @@
+node dist/index.js pause --stream 1001 --freeze true --keypair /secrets/guardian.json

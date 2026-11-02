@@ -1,0 +1,7 @@
+2/3 How @KyivStream works:
+🛡️ Escrow PDA vault with multi-arbitrator threshold quorum
+⚡ Sub-second tranche unlocking upon cryptographic milestone verification
+✉️ Automated enterprise telemetry: Real-time @resend email receipts + @SlackHQ ops alerts
+🛑 Algorithmic cancellation penalties protecting both sponsors and builders
+
+No manual wire latency. Just pure deterministic execution at 400ms finality.

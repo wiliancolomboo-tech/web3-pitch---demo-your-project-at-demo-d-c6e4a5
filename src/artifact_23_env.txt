@@ -1,0 +1,5 @@
+SOLANA_RPC_URL=https://api.devnet.solana.com
+PROGRAM_ID=Tr1dentStream1111111111111111111111111111111
+RESEND_API_KEY=re_enterprise_test_123456789
+SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+OPS_EMAIL_RECIPIENT=kyiv-demo@tridentstream.io

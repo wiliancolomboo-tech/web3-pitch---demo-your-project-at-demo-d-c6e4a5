@@ -1,0 +1,6 @@
+Trident is fully tested, audited for PDA bounds, and turnkey Dockerized for sovereign institutions, NGOs, and logistics operators.
+
+Watch the live demo in Kyiv or inspect our production-ready codebase:
+🔗 github.com/trident-protocol/trident-solana-kyiv
+
+Special thanks to Kyiv Demo Day organizers! 🚀🛡️

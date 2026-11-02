@@ -1,0 +1,14 @@
++----------------------------------------------------------------------------------------------------+
+|                                    OPERATIONAL DISASTER RUNBOOK                                    |
++----------------------+------------------------------------+----------------------------------------+
+| Severity Level       | Trigger Scenario                   | Mitigation Procedure                   |
++----------------------+------------------------------------+----------------------------------------+
+| SEV-1 (CRITICAL)     | Exploitation or Merkle Root Breach | Admin calls `set_pause(true)` via CLI. |
+|                      |                                    | Instantly halts all outgoing claims.   |
++----------------------+------------------------------------+----------------------------------------+
+| SEV-2 (HIGH)         | Dead-Man Inactivity (Post-Deadline)| Call `emergency_refund()` after        |
+|                      |                                    | `claim_deadline`. Reclaims to Admin.   |
++----------------------+------------------------------------+----------------------------------------+
+| SEV-3 (MODERATE)     | Guardian Key Loss                  | M-of-N quorum allows 2 of 3 keys       |
+|                      |                                    | to sign, preventing operational stall. |
++----------------------+------------------------------------+----------------------------------------+

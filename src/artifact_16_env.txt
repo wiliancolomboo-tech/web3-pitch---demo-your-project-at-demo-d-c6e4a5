@@ -1,0 +1,7 @@
+SOLANA_RPC_URL=https://api.devnet.solana.com
+PROGRAM_ID=Volya11111111111111111111111111111111111111
+ORACLE_KEYPAIR_PATH=/app/keys/oracle-authority.json
+RESEND_API_KEY=re_your_enterprise_key_here
+SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+AUDIT_EMAIL=kyiv-infra-audit@volyaguard.ua
+HEALTH_PORT=8080

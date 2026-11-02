@@ -1,0 +1,12 @@
+1/3 🚀 Live from Kyiv Demo Day! We are proud to introduce @KredoStream: The first institutional-grade continuous liquidity streaming & circuit-breaker protocol built natively for @Solana.
+
+No more batched monthly payroll or locked counterparty risk. High-velocity engineering teams can now stream value by the second with zero slippage and sub-cent fees. 🧵👇
+
+2/3 ⚡ Built with Anchor & Rust, KredoStream leverages SVM clockwork state machines to guarantee mathematical correctness for continuous vesting and emergency cancellations. 
+
+Integrated end-to-end with @ResendLabs for automatic email settlements & real-time webhook audit receipts to company treasuries. Complete non-custodial peace of mind. 🛡️🦀
+
+3/3 🇺🇦 Kyiv is home to some of the world's most resilient builders. KredoStream empowers global DAOs & tech collectives to deploy sovereign streaming vaults that never sleep.
+
+Check out our open-source repo, Anchor test suite, and 1-click Docker runner here: https://github.com/kredostream/kredostream
+See you at the top of the leaderboard! 🏆 cc @Solana @solana_devs #SolanaKyiv #DemoDay

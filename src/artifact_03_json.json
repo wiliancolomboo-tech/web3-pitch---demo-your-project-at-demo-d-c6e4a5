@@ -1,0 +1,21 @@
+{
+  "name": "volia-relay-daemon",
+  "version": "1.0.0",
+  "description": "Enterprise Event Listener and Webhook Relay for Project Volia",
+  "main": "dist/agent-worker.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/agent-worker.js"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@solana/web3.js": "^1.91.0",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/node-fetch": "^2.6.11",
+    "typescript": "^5.3.3"
+  }
+}

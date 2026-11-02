@@ -1,0 +1,11 @@
+valkyrie-grid protocol end-to-end test suite
+    ✔ 1. Initializes global protocol configuration with verified bumps (142ms)
+    ✔ 2. Deploys Liquidity Vault and Escrow ATA (289ms)
+    ✔ 3. Registers an Edge DePIN Micro-Generator Node with Zero-Copy state (185ms)
+    ✔ 4. LP deposits liquidity into the reserve vault (312ms)
+    ✔ 5. Node streams verified real-time physical telemetry (98ms)
+    ✔ 6. Operator draws collateralized emergency liquidity during grid stress (210ms)
+    ✔ 7. Security Guard: Rejects excessive draw exceeding physical reserve capacity (88ms)
+    ✔ 8. Keeper executes state decay crank autonomously (115ms)
+
+  8 passing (1.44s)

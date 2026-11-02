@@ -1,0 +1,18 @@
+kyiv-relief-protocol/
+├── Cargo.toml
+├── Anchor.toml
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example
+├── programs/
+│   └── kyiv-relief/
+│       ├── Cargo.toml
+│       └── src/
+│           └── lib.rs
+├── cli/
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── src/
+│       └── kyiv_orchestrator.ts
+└── tests/
+    └── kyiv-relief.ts

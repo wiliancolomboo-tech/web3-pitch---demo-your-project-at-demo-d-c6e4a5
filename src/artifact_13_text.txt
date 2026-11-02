@@ -1,0 +1,4 @@
+2/4 Under the hood:
+🔹 Sub-second linear micro-vesting computed deterministically on-chain via Anchor
+🔹 Guardian Emergency Safeguard: multi-role pause circuits protecting treasury reserves during physical or cyber disruption
+🔹 Enterprise pipeline: Automated audit receipts via @resend & SecOps Slack alerts.

@@ -1,0 +1,11 @@
+# Solana Network Configuration
+SOLANA_RPC_URL="https://api.devnet.solana.com"
+PROGRAM_ID="Vartad9W1Fm8fW4c5vK4b2QJ7mY8p8t2W1G8h9j8k7L"
+
+# Keeper Signing Authority (JSON Array of Uint8[64])
+KEEPER_PRIVATE_KEY="[1,2,3...]"
+
+# Enterprise Telemetry
+RESEND_API_KEY="re_1234567890abcdef"
+AUDIT_EMAIL_RECIPIENT="cfo@donorfund.org"
+DISCORD_WEBHOOK_URL="https://api.example.com/webhooks/alerts/placeholder"

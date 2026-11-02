@@ -1,0 +1,6 @@
+Why @Solana?
+⚡ 400ms finality with sub-penny fees ($0.00025)
+🔐 PDA-derived non-custodial vaults with sequential milestone release
+📡 Direct webhook bridges to @Resend and Slack for instant institutional proof-of-delivery
+
+Zero counterparty risk. 100% transparent. Open-source.

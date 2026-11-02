@@ -1,0 +1,8 @@
+VolyaVault is 100% open-source, turnkey dockerized, and ready for production deployments.
+
+Built with pride for Kyiv Demo Day to provide uncompromisable financial sovereignty.
+
+Code & IDL: https://github.com/volya-vault/volya-protocol
+Live Demo & Architecture Docs: https://volyavault.ua
+
+Slava Ukraini! 🇺🇦 Let’s build on @solana! 🚀

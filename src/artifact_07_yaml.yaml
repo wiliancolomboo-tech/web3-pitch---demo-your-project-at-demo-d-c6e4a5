@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  volia-keeper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: volia-contingency-sentinel
+    restart: always
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - KEEPER_KEYPAIR_PATH=/etc/volia/keeper-keypair.json
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - INCIDENT_WEBHOOK_URL=${INCIDENT_WEBHOOK_URL}
+      - POLL_INTERVAL_MS=5000
+    volumes:
+      - ./keys/keeper-keypair.json:/etc/volia/keeper-keypair.json:ro
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"

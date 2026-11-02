@@ -1,0 +1,5 @@
+Live from Demo Day in Kyiv: Traditional grants & tech vouchers move at bureaucratic speeds with zero on-chain proof. 
+
+Introducing KyivStream (Volia Protocol) 🇺🇦⚡
+
+Institutional, milestone-vesting escrow on @Solana with deterministic PDA vaults & cryptographically verified releases.

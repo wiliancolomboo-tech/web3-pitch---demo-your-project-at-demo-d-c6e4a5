@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  trident-sentry:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kyivpay-sentry-worker
+    restart: unless-stopped
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - SOLANA_WS_URL=wss://api.devnet.solana.com
+      - PROGRAM_ID=Trid42G8k7q4n1W9WvX6d9oP2Jk7b5m4y8N1vQ3sKYiV
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - AUDIT_EMAIL_TO=kyiv-operations@aid-network.ua
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - sentry-cache:/app/cache
+
+volumes:
+  sentry-cache:
+    driver: local

@@ -1,0 +1,6 @@
+3/3 We're live on Devnet with 100% test coverage, turnkey Dockerization, and a ready-to-run CLI. 
+
+Massive gratitude to the Solana ecosystem in Kyiv & Ukraine for proving that resilient engineering wins hackathons and rebuilds nations. 
+
+Check out the verified code & repo: github.com/kyivstream/kyiv-stream 🚀🇺🇦
+#Solana #DemoDayKyiv #KyivTech #Web3 #Rust #Anchor

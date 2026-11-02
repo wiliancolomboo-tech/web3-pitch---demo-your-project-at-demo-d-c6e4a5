@@ -1,0 +1,7 @@
+Watch the end-to-end demo on Devnet: from funding to milestone approval in 400ms. 
+
+Building the financial bedrock for Ukraine's defense, tech, and civic reconstruction on Solana.
+
+Code is open-source, Dockerized, and audit-ready 🛠️
+Repo: https://github.com/kyivstream/protocol
+#Solana #KyivDemoDay #SolanaKyiv #BuildOnSolana @Solana @solana_devs

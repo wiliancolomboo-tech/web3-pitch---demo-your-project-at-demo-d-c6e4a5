@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  volia-sentinel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: volia-sentinel-daemon
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - SOLANA_WS_URL=wss://api.devnet.solana.com
+      - PROGRAM_ID=VoL1A5ZkUjWj1d2kP9bKq2eL4xY3vW8rT6aF7cE1pQ9
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - AUDIT_EMAIL=kyiv-infra@resilience.gov.ua
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"

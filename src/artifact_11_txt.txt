@@ -1,0 +1,5 @@
+Live from Kyiv Demo Day 🇺🇦: Introducing Project Sich (СІЧ) — the autonomous, zero-knowledge crisis liquidity & humanitarian aid engine built on @solana. 
+
+Sub-second micro-treasuries, 100% cryptographic transparency, and zero intermediary loss. 
+
+Here is how we built it 🧵👇

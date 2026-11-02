@@ -1,0 +1,15 @@
+[x] 1. Reentrancy Guarding:
+    - Complies with Solana's Checks-Effects-Interactions pattern. State variables 
+      (debt and collateral balances) are updated before external CPI transfers.
+[x] 2. Deterministic Signer Validation:
+    - Market Vault CPIs use canonical PDA seeds [b"market", market_id.to_le_bytes(), &[bump]].
+    - Prevents arbitrary signer spoofing and cross-program replay attacks.
+[x] 3. Strict Account Ownership & Vault Constraints:
+    - User ATAs and PDAs explicitly assert owner == user.key() and mint == market.mint.
+    - Eliminates fake token account and malicious mint injection vulnerabilities.
+[x] 4. Integer Overflow / Underflow Prevention:
+    - All mathematical operations utilize native checked math (checked_add, checked_mul, checked_div).
+    - Prevents truncation or wrap-around exploits in collateral calculations.
+[x] 5. Oracle Staleness Guard:
+    - Requires block timestamp check (unix_timestamp - price_timestamp <= 60 seconds).
+    - Defends against stale oracle relay attacks during cluster-wide network partitions.

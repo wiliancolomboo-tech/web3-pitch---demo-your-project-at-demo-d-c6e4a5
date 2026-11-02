@@ -1,0 +1,12 @@
++--------------------------------------------------------------------------------------------------+
+|                                  OPERATIONAL RUNBOOK: SEVERITY MATRIX                            |
++---------+-------------------------------+--------------------------------------------------------+
+| Level   | Trigger                       | Remediative Action                                     |
++---------+-------------------------------+--------------------------------------------------------+
+| SEV-1   | Program Vault Desync / Reorg  | Relayer triggers pause signal; verify on-chain balances|
+|         |                               | against EscrowAccount.remaining_amount PDA via CLI.    |
+| SEV-2   | WebSocket RPC Drops           | Auto-reconnect exponential backoff activates; falls    |
+|         |                               | back to backup HTTP polling at 10-second intervals.    |
+| SEV-3   | Resend API 429 Rate Limit     | Failed notifications queue locally in memory buffer    |
+|         |                               | with FIFO retry at 60s cooldown.                       |
++---------+-------------------------------+--------------------------------------------------------+

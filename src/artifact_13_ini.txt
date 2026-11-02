@@ -1,0 +1,9 @@
+NODE_ENV=production
+PORT=8080
+SOLANA_NETWORK=devnet
+SOLANA_RPC_PRIMARY=https://api.devnet.solana.com
+SOLANA_RPC_BACKUP=https://devnet.helius-rpc.com/?api-key=free-tier
+PROGRAM_ID=KLYUCh312qB4VfFvW9LgN4uN5zN9p8o3q4eM9Qv5pKY
+RESEND_API_KEY=re_enterprise_live_key
+AUDIT_EMAIL_RECIPIENT=kyiv-demo-auditors@klyuch.ua
+SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder

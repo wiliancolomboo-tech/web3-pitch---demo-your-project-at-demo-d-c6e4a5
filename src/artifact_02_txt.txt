@@ -1,0 +1,32 @@
++-----------------------------------------------------------------------------------+
+|                              KYIVCORE TOPOLOGY                                    |
+|                                                                                   |
+|  [Enterprise Treasury]       [Beneficiary / Contributor]       [Designated Arbiter] |
+|           |                              |                                |       |
+|           +------------------------------+--------------------------------+       |
+|                                          |                                        |
+|                                    HTTPS / RPC                                    |
+|                                          v                                        |
+|                 +-------------------------------------------------+               |
+|                 |          Solana RPC Cluster (Helius/Triton)     |               |
+|                 +-------------------------------------------------+               |
+|                                          |                                        |
+|                                          v                                        |
+|                 +-------------------------------------------------+               |
+|                 |   KyivCore Program (ProgramID: Kyiv...Core)    |               |
+|                 |   - Stream PDA (State, Rate, Arbiter, Deadlines)|               |
+|                 |   - Vault PDA (Escrow Token Holding Account)    |               |
+|                 +-------------------------------------------------+               |
+|                                          |                                        |
+|                          WebSocket (logsSubscribe / Account)                      |
+|                                          v                                        |
+|                 +-------------------------------------------------+               |
+|                 |        KyivCore Enterprise Relayer Engine       |               |
+|                 +-------------------------------------------------+               |
+|                                          |                                        |
+|                 +------------------------+------------------------+               |
+|                 |                                                 |               |
+|                 v                                                 v               |
+|        [Resend API: Email Audit]                        [Discord / Slack Webhook] |
+|    "Stream #42 - 15,000 USDC Disbursed"                 "Milestone 2 Verified"    |
++-----------------------------------------------------------------------------------+

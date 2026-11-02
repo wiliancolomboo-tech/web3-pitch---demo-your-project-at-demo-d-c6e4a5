@@ -1,0 +1,5 @@
+Solana’s speed turns payroll into an uninterrupted physical utility. We have open-sourced the entire stack: production contract, keeper telemetry daemon, and 1-click Docker deployment.
+
+Explore the demo & repo: https://github.com/kyivpay/kyivpay-core
+
+Дякуємо @Solana ecosystem for making sovereign finance real! 🇺🇦🚀

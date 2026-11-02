@@ -1,0 +1,9 @@
+1/3 🇺🇦 Live from Demo Day in Kyiv: Meet @VolyaProtocol — the sovereign real-time milestone streaming & escrow protocol built on @Solana for distributed engineering & crisis infrastructure teams. High speed meets cryptographic assurance. ⚡️🔒 #SolanaKyiv #BuildOnSolana
+
+2/3 🛠️ Traditional escrows freeze capital; simple streaming ignores milestones. Volya solves both:
+• Per-second non-custodial SPL streaming
+• Dual-key verification cliff unlocks
+• Real-time Slack/Discord telemetry + @Resend receipts
+100% rust, Anchor-native, zero trust assumptions. 🚀
+
+3/3 📦 Production-ready from day 1: Fully tested suite, 1-click Dockerization, and zero-downtime micro-payouts. We are empowering builders in Ukraine and worldwide to get compensated instantly and verifiably. Check out our open-source repo & live devnet demo! 🇺🇦⚡️

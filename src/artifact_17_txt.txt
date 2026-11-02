@@ -1,0 +1,8 @@
+Building sovereign Web3 infrastructure from Kyiv to the world. 🌍
+
+Turnkey dockerized deploy, ready for enterprise treasuries & humanitarian logistics across the Solana ecosystem.
+
+GitHub: https://github.com/volya-protocol/engine
+Live Devnet ID: VoLyaS1vENe8mB3qTjUuG49nF7xYpCkW8dZR2hA6Eky
+
+Dyakuyu Kyiv! 🇺🇦🚀 #Solana #KyivDemoDay #SolanaHackerHouse

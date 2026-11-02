@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  volya-sentinel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: volya-sentinel-daemon
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - SOLANA_WS_URL=wss://api.devnet.solana.com
+      - PROGRAM_ID=VoLyaX1111111111111111111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY:-re_test_dummy_key}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN:-}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID:-}
+      - AUDIT_EMAIL_TO=${AUDIT_EMAIL_TO:-auditors@volya-relief.org}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - volya-net
+
+networks:
+  volya-net:
+    driver: bridge

@@ -1,0 +1,6 @@
+[programs.devnet]
+volia_stream = "VoL1aStReamKy1vDemoDay11111111111111111111111"
+
+[provider]
+cluster = "Devnet"
+wallet = "~/.config/solana/id.json"

@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-02-23T12:00:00.000Z",
+  "level": "INFO",
+  "service": "sich-sentinel",
+  "status": "HEALTHY",
+  "processed_slots": 312849120,
+  "events_dispatched": 142
+}

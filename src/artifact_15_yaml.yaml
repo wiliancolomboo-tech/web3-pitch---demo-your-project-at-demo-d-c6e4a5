@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  klyuch-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: klyuch_enterprise_daemon
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_PRIMARY=https://api.devnet.solana.com
+      - SOLANA_RPC_BACKUP=https://devnet.helius-rpc.com/?api-key=test
+      - PROGRAM_ID=KLYUCh312qB4VfFvW9LgN4uN5zN9p8o3q4eM9Qv5pKY
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - AUDIT_EMAIL_RECIPIENT=${AUDIT_EMAIL_RECIPIENT}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "node", "-e", "process.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"

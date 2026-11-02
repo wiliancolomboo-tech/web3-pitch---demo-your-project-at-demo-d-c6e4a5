@@ -1,0 +1,7 @@
+Institutional compliance built-in: every milestone tranche dispatches cryptographic audit certs via @resend and enterprise webhooks in real time.
+
+Built for Ukrainian resilience, deployable anywhere. 
+
+Check our repo, test suite & runbook: github.com/veos-escrow/protocol 
+
+Glory to Ukraine! 🇺🇦🫡 @solanastatus

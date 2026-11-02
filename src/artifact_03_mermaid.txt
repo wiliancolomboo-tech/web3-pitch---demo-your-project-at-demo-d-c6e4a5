@@ -1,0 +1,27 @@
+sequenceDiagram
+    autonumber
+    actor Funder as Enterprise Grantor
+    actor Recipient as Builder / Beneficiary
+    participant Program as Solana Volya Program
+    participant Vault as Program Token Vault PDA
+    participant Worker as Volya Enterprise Daemon
+    participant Resend as Resend Email Gateway
+    participant Ops as Slack/Enterprise ERP
+
+    Funder->>Program: init_and_deposit(amount, milestone_count, arbiter)
+    Program->>Vault: CPI: transfer_checked(Funder -> Vault)
+    Program-->>Worker: Emit EscrowCreatedEvent
+    Worker->>Resend: Send deposit confirmation & tax receipt
+    Worker->>Ops: Dispatch #grants-feed notification
+
+    Recipient->>Program: claim_milestone(milestone_index)
+    alt Approved by Funder or Arbiter
+        Program->>Vault: CPI: transfer_checked(Vault -> Recipient)
+        Program-->>Worker: Emit MilestoneDisbursedEvent
+        Worker->>Resend: Email Recipient (Funds Transferred) & Funder (Proof Accepted)
+        Worker->>Ops: Slack alert: Milestone payout verified
+    else Timeout / Dispute
+        Program->>Vault: CPI: transfer_checked(Vault -> Funder Refund)
+        Program-->>Worker: Emit ClawbackExecutedEvent
+        Worker->>Ops: Emergency Slack Alert
+    end

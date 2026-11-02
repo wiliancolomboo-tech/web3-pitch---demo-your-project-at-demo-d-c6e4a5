@@ -1,0 +1,12 @@
+GET /healthz HTTP/1.1
+Host: localhost:8080
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "status": "HEALTHY",
+  "program_id": "Tremb1taPay111111111111111111111111111111111",
+  "synced_slot": 312094812,
+  "dispatcher": "CONNECTED"
+}

@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  volya-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: volya-telemetry-daemon
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - VOLYA_PROGRAM_ID=VoLyaG8zKevdC6qUvVz4n8k1yTqm2R9J5wE4VbKky1v
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - AUDITOR_EMAIL=${AUDITOR_EMAIL}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"

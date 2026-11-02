@@ -1,0 +1,7 @@
+2/3 Under the hood:
+✅ Sub-second milestone releases via Solana Sealevel PDA vaults
+✅ Dual-key attestations (Auditor Oracle + Grantor)
+✅ Instant on-chain circuit breakers for black-swan containment
+✅ Enterprise webhook bridges to @resend for institutional donor audits
+
+Fast. Verifiable. Bulletproof.

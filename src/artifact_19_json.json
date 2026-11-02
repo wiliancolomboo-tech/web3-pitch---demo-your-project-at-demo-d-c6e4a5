@@ -1,0 +1,9 @@
+GET /health
+{
+  "status": "HEALTHY",
+  "programId": "Trid7dZkWc6o5bSmWvPZtVd8f5pTzQJ5fFfU9gH8yK1",
+  "slot": 284192040,
+  "oracle_drift_ms": 142,
+  "active_streams": 14,
+  "contingency_reserve_ratio": "1.00"
+}

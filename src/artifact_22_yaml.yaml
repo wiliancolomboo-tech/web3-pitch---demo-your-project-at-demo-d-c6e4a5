@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  trident-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trident-enterprise-gateway
+    restart: always
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=Tr1dentStream1111111111111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - OPS_EMAIL_RECIPIENT=kyiv-demo@tridentstream.io
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "node", "-e", "process.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

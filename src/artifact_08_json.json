@@ -1,0 +1,8 @@
+{
+  "status": "UP",
+  "service": "Volia Sentinel Keeper Daemon",
+  "cluster_slot": 298410291,
+  "monitored_vaults_count": 14,
+  "active_contingencies": 0,
+  "timestamp": "2025-05-18T10:14:02.128Z"
+}

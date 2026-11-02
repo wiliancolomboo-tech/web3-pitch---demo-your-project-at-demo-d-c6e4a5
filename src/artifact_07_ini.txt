@@ -1,0 +1,8 @@
+SOLANA_RPC_WS=wss://api.devnet.solana.com
+SOLANA_RPC_HTTP=https://api.devnet.solana.com
+VOLYA_PROGRAM_ID=VoLya11111111111111111111111111111111111111
+DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+RESEND_API_KEY=re_123456789abcdef
+AUDIT_NOTIFY_EMAIL=kyiv-grants@volyaprotocol.io
+PORT=8080

@@ -1,0 +1,22 @@
+🧵 1/3
+Thrilled to pitch & demo #KyivShield (VartaProtocol) at @Solana Kyiv Demo Day! 🇺🇦⚡️
+
+Mission-critical treasuries in high-risk zones can't afford kinetic single-points-of-failure or locked payroll. 
+
+We built an autonomous, dead-man failover treasury engine native to Solana. Here is how it works: 👇
+
+🧵 2/3
+🔐 Cryptographic Heartbeats on-chain with sub-second finality
+⏳ Programmable time-decay fallback payout streams
+🛡️ Backup multi-sig emergency overrides
+🚨 Real-time enterprise webhook alerting via @resend & Discord/Slack
+
+Zero custodial lockups. Pure Sealevel speed. Built for resilience.
+
+🧵 3/3
+Huge shoutout to the Ukrainian Web3 community and the @Solana ecosystem for hosting Demo Day in Kyiv! 
+
+Explore the open-source code, Anchor contracts, and turnkey Sentinel runner here:
+🔗 github.com/varta-protocol/kyivshield-core
+
+#Solana #KyivDemoDay #BUIDL #Rust #Anchor

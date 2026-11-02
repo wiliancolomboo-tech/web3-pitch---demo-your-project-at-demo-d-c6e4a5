@@ -1,0 +1,15 @@
+1/3 🇺🇦 Proud to unveil VOLYA PROTOCOL (Воля) at Kyiv Demo Day!
+When critical humanitarian & medical supply lines are disrupted, trust cannot rely on paper manifests or slow banking wires.
+
+Volya brings zero-trust Proof-of-Delivery escrows directly onto @solana with sub-second finality. 🧵👇
+
+2/3 ⚡ Built for resilience:
+🔒 Program-Derived Escrow Vaults holding SOL & Token-2022 stablecoins
+✍️ Cryptographic recipient attestation with on-chain Ed25519 PoD
+📧 Instant donor audit receipts via @resend & live operational telemetry via Discord hooks
+⏰ Trustless fallback reclaim windows
+
+3/3 🛡️ From Odesa to Kharkiv and Kyiv: humanitarian logistics can now move as fast as the Solana blockchain.
+Full Anchor smart contracts, deterministic test suites, and turnkey dockerized bridge are 100% open-source!
+
+Check our demo on Devnet 🚀 #SolanaKyiv #Solana #KyivDemoDay #BUIDL

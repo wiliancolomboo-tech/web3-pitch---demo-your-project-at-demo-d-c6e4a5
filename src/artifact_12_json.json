@@ -1,0 +1,9 @@
+{
+  "status": "HEALTHY",
+  "program_id": "Aeg1sKy1v1111111111111111111111111111111111",
+  "solana_slot_height": 312948214,
+  "ws_connection": "CONNECTED",
+  "resend_gateway": "ONLINE",
+  "slack_webhook": "ONLINE",
+  "events_processed": 42
+}

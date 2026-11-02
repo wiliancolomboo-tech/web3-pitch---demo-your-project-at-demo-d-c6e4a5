@@ -1,0 +1,17 @@
+1. PDA Seed Collision & Substitution Guard:
+   - PDA Seeds: [b"stream", sender.key(), recipient.key(), stream_id.to_le_bytes()]
+   - Enforces unique isolated escrow addresses per stream. No cross-stream contamination.
+
+2. Checks-Effects-Interactions (CEI) Compliance:
+   - State variable `stream.claimed_amount` is mutated and checked BEFORE CPI transfers.
+   - Eliminates reentrancy and out-of-order execution exploits across Solana cross-program calls.
+
+3. Arithmetic Overflow & Truncation Invariants:
+   - Uses Rust native checked arithmetic (`checked_add`, `checked_sub`, `checked_mul`, `checked_div`).
+   - Rate per second utilizes fixed-point math with a 64-bit fractional component (`FP_SCALE = 1 << 64`),
+     preventing 1-lamport rounding dust loss over long time horizons.
+
+4. Authority Verification Matrix:
+   - `withdraw_from_stream`: Signer strictly verified against `stream.recipient`.
+   - `cancel_stream`: Signer strictly verified against `stream.sender`.
+   - Token Account ownership confirmed via `token::authority` and `token::mint` checks.

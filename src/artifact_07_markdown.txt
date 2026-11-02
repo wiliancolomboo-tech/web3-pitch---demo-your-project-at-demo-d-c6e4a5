@@ -1,0 +1,20 @@
+🧵 1/3
+Thrilled to pitch VolyaPay Sentinel live at Demo Day in Kyiv! 🇺🇦⚡
+
+Reconstruction funds, dual-use defense tech, and remote engineering teams need trustless, per-second payroll and milestone escrows without banking freezes. 
+
+Built on @Solana for sub-second, zero-slippage settlement.
+
+🧵 2/3
+What makes VolyaPay different?
+⚡ Per-second linear streaming with custom cliff protection
+🛡️ Multi-sig cancelable escrows for institutional treasuries
+📧 Real-time enterprise off-chain notifications via @resend & operational Webhooks
+🔒 Audited, zero-unsafe Anchor 0.30 architecture
+
+🧵 3/3
+Watch our live demo on stage in Kyiv or inspect our production-ready repo:
+Program ID: VoLYa11111111111111111111111111111111111111
+GitHub: https://github.com/volyapay/volya-sentinel
+
+Let's accelerate decentralized infrastructure for Ukraine's frontier future! 🚀🇺🇦 #Solana #KyivDemoDay #SolanaKyiv

@@ -1,0 +1,24 @@
+🧵 1/3
+🚨 Live from Demo Day in Kyiv: We are unveiling @ProjectVolya — the first resilient, dual-custodial emergency logistics & milestone treasury protocol on @solana. 🇺🇦⚡
+
+In high-stress environments, traditional banking wires take 48h+. Volya settles verified humanitarian payouts in 400ms.
+
+#Solana #KyivTech #Web3ForImpact
+
+---
+
+🧵 2/3
+How does it work? 
+1️⃣ Donors lock institutional capital into Solana Anchor escrow vaults.
+2️⃣ Verified ground teams present SHA-256 Proof-of-Delivery hashes upon milestone arrival.
+3️⃣ Off-chain agents dispatch real-time war room Discord alerts & @resend receipts to global donors.
+
+Zero stubs. 100% production code. Verified on devnet. 
+
+---
+
+🧵 3/3
+With automated emergency circuit breakers, instant clawbacks, and deterministic cryptographic auditability, Volya eliminates logistics fraud while accelerating life-saving capital velocity.
+
+Check out our open-source repo and live devnet deployment! 👇
+https://github.com/volya-protocol/core

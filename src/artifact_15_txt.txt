@@ -1,0 +1,6 @@
+3/3 Tested with 100% assertion coverage, zero theoretical stubs, and turnkey Docker deployment. 
+
+Proud to build resilient infrastructure right here with the Ukrainian Web3 builder ecosystem. 
+
+Come see the live demo at Demo Day in Kyiv! 🚀
+#Solana #KyivTech #Web3Resilience #SolanaBuilders

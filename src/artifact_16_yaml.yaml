@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  kyivpay-telemetry-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kyivpay-core-daemon
+    restart: unless-stopped
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=KyivPay1111111111111111111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - RESEND_SENDER_EMAIL=${RESEND_SENDER_EMAIL:-alerts@kyivpay.io}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - OPERATIONAL_AUDIT_EMAIL=${OPERATIONAL_AUDIT_EMAIL:-team@kyivpay.io}
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e 'console.log(process.uptime())'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

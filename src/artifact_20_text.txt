@@ -1,0 +1,6 @@
+Under the hood of @KyivPay:
+⚙️ High-precision (u128) non-custodial streaming engine on SVM Anchor
+🛡️ Multi-arbiter cryptographic circuit breaker with automated clawbacks
+🔔 Sub-second enterprise integration pipeline via @resend and Slack webhooks
+
+Zero-leakage, gas-optimized math.

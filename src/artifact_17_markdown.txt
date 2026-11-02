@@ -1,0 +1,30 @@
+[0:00 - 0:25] THE CRISIS (Visual: Screen displays high slippage on continuous AMM & Jito sandwich bot)
+"Every single day on Solana, retail users lose millions to toxic MEV. Searchers inspect mempools,
+bid up priority fees in Jito bundles, and sandwich everyday users.
+Continuous-time AMMs are fundamentally broken because they reward whoever has the fastest fiber, 
+not whoever provides the best price. Kyiv is building the future of sovereign tech, and it's time
+our financial rails possessed that same integrity. That is why we built Volya."
+
+[0:25 - 0:55] ENTER VOLYA (Visual: Architecture diagram showing Commit -> Reveal -> UCP Match)
+"Volya—Ukrainian for 'Freedom' and 'Will'—is Solana's verifiable, sealed-bid batch settlement protocol.
+Instead of continuous execution where milliseconds determine your profit or loss, Volya quantizes trading 
+into discrete epochs. In Phase 1, trades are submitted as zero-knowledge commitment hashes with upfront escrow. 
+No validator, no searcher, no bot knows your side, your size, or your limit price. 
+Frontrunning is mathematically impossible."
+
+[0:55 - 1:30] SYSTEM DEMONSTRATION (Visual: Terminal splitscreen: Anchor test execution + Solana Explorer)
+"Watch this live: Alice wants to buy 2 SOL at $150. Bob wants to sell at $150. 
+Alice calls 'commit_order'. Notice her parameters are completely invisible on-chain—just a SHA-256 hash 
+and collateral in our PDA vault.
+Once the commit slot expires, the reveal window opens. The preimages are verified by Solana's native runtime.
+Now our settle_batch instruction executes: in 41,000 Compute Units, it computes the Uniform Clearing Price.
+Alice and Bob both clear at exactly $150. Zero slippage. Zero sandwiching. Surplus quote tokens are instantly 
+refunded to Alice's wallet, and the PDA is pruned, returning rent lamports."
+
+[1:30 - 2:00] WHY WE WIN (Visual: Summary slide: TVL metrics, CU efficiency, Ecosystem fit)
+"Volya turns the current MEV paradigm on its head:
+1. It is hyper-efficient: Under 45,000 Compute Units per settle, meaning 20 matches per block!
+2. Zero structural MEV: Eliminates sandwiching at the cryptographic layer without trusted enclaves.
+3. Plug-and-play: Any AMM or Perp DEX can route discrete batch flows through Volya PDAs.
+Volya delivers true economic freedom and execution guarantees to every Solana user.
+Thank you, and Slava Ukraini!"

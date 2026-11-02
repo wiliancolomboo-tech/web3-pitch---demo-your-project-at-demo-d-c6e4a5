@@ -1,0 +1,23 @@
++---------------------+       JSON-RPC / WSS        +---------------------------+
+|  Institutional UI   | <=========================> | Solana Cluster (Dev/Main) |
+|   & Admin CLI       |                             |  - Trident Program:       |
++---------------------+                             |    triD111...pda          |
+                                                    |  - PDA Vaults & Records   |
+                                                    +---------------------------+
+                                                                  ||
+                                                            Event Log Stream
+                                                                  ||
+                                                                  \/
++-------------------------------------------------------------------------------+
+|                      Trident Enterprise Event Gateway                         |
+|  - Node.js / TypeScript Async Consumer Engine                                 |
+|  - Exponential Backoff & Slot Replay Protection                               |
+|  - Idempotent Transaction Ingestion Pipeline                                  |
++-------------------------------------------------------------------------------+
+         ||                                            ||
+         \/                                            \/
++-------------------------+                 +-----------------------------------+
+|  Resend API (Email)     |                 |  Slack / Discord Enterprise Hooks |
+|  - Donors & Auditors    |                 |  - Security & SecOps Alerting     |
+|  - Real-time Receipts   |                 |  - Circuit-Breaker Notifications  |
++-------------------------+                 +-----------------------------------+

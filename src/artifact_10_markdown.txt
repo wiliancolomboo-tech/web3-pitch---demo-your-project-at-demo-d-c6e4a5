@@ -1,0 +1,14 @@
+1/3 🇺🇦 Rebuilding & contingency relief demands precision, speed, and absolute cryptographic transparency.
+
+Excited to introduce KyivStream Protocol (@KyivStream) at Demo Day in Kyiv! Built natively on @solana, KSP brings real-time, milestone-governed capital disbursals to civic defense and infrastructure grants.
+
+2/3 ⚡ Why Solana? 
+When localized banking lines stall, 400ms finality & sub-cent fees matter.
+KSP leverages deterministic Anchor PDAs + Ed25519 oracle attestations + instant institutional compliance receipts via @resend. Zero middlemen. Real-time proof of delivery.
+
+3/3 🛡️ Code is open-source, mathematically proven against reentrancy, and equipped with a decentralized emergency timelock recovery engine.
+
+Demo Day is just the beginning. Let’s build an unshakeable sovereign financial foundation for Ukraine on Solana.
+
+🔗 GitHub: github.com/kyivstream/protocol
+#Solana #KyivDemoDay #Web3ForUkraine #CryptoRelief

@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  kyivcore-relayer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kyivcore-relayer-prod
+    restart: always
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - SOLANA_WSS_URL=wss://api.devnet.solana.com
+      - PROGRAM_ID=Ky1vCore11111111111111111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+      - AUDIT_EMAIL_TO=${AUDIT_EMAIL_TO:-treasury@kyivcore.io}
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 3

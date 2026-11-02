@@ -1,0 +1,44 @@
+flowchart TD
+    subgraph ClientLayer["Client & Administration Layer"]
+        Admin[("Treasury Admin / Lead")]
+        Worker[("Beneficiary / Contractor")]
+        Relayer[("Autonomous Relayer Daemon")]
+    end
+
+    subgraph SolanaCluster["Solana Blockchain (Mainnet / Devnet)"]
+        Program["KLYUCH Anchor Program"]
+        TreasuryConfig["PDA: Treasury Configuration\n(Authority, Grace Period, Heartbeat)"]
+        StreamAccount["PDA: Stream Account\n(Rate, Balance, Claimed, LastClaim)"]
+        VaultToken["PDA: Token Escrow Vault\n(SPL Token Holdings)"]
+        BeneficiaryToken["Beneficiary SPL ATA"]
+    end
+
+    subgraph EnterpriseOps["Enterprise Telemetry & Notifications"]
+        RPC[Resilient Solana RPC / Helius WebSocket]
+        WorkerBot["KLYUCH Node Daemon"]
+        ResendAPI["Resend Email API\n(Audit Reports to CFO)"]
+        TelegramOps["Telegram/Slack Incident Webhook"]
+    end
+
+    %% Interactions
+    Admin -->|"1. Initialize Treasury & Deposit Funds"| Program
+    Admin -->|"2. Record Heartbeat (Proof-of-Life)"| Program
+    Program -->|"Configures"| TreasuryConfig
+    Program -->|"Mints Escrow"| VaultToken
+
+    Admin -->|"3. Open Streaming Schedule"| Program
+    Program -->|"Instantiates"| StreamAccount
+
+    Worker -->|"4. Claim Accrued Vesting"| Program
+    Program -->|"Validates Rate & Time Delta"| StreamAccount
+    Program -->|"Transfers SPL Tokens"| VaultToken
+    VaultToken -->|"Disburses"| BeneficiaryToken
+
+    Relayer -->|"5. Trigger Contingency (If Inactive)"| Program
+    Program -->|"Evaluates (Now > LastHeartbeat + GracePeriod)"| TreasuryConfig
+
+    %% Telemetry Pipeline
+    Program -.->|"Emits Anchor Events"| RPC
+    RPC -->|"Subscribes via WS"| WorkerBot
+    WorkerBot -->|"Dispatches Formal Audit Receipt"| ResendAPI
+    WorkerBot -->|"Sends Real-Time Ops Escalation"| TelegramOps

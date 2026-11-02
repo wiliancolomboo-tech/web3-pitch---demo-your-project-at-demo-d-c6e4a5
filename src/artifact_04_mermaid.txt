@@ -1,0 +1,78 @@
+flowchart TD
+    subgraph Client_Layer [Client & Keeper Interface]
+        User[Vault Depositor / Streamer]
+        Keeper[Permissionless Keeper / Liquidator]
+        Admin[Multisig Gov / Emergency Guard]
+    end
+
+    subgraph Solana_Runtime [Solana Sealevel Runtime]
+        subgraph Program_Boundary [Project SICH Program ID: S1CHvAu1tX8QyZ7pW3mK9v8r2T1aN4eL6dY7kP5mQ0z]
+            Router[Instruction Dispatcher & Fallback Guard]
+            
+            subgraph Security_Guards [Security & Verification Layer]
+                Auth[Signer & PDA Verification]
+                Reentrancy[Reentrancy Lock - Invariant Bitflags]
+                TimeCheck[Clock Sysvar & Staleness Guard]
+                OracleGuard[Cross-Oracle Variance Assertor]
+            end
+
+            subgraph Core_Engine [State Machines & Execution]
+                StreamEngine[Stream Rate & Debt Accumulator Engine]
+                LiquidationEngine[Collateral Ratio & Fixed-Point Liquidator]
+                YieldRebalancer[Dynamic Yield Streaming Router]
+            end
+
+            subgraph State_Storage [Program Derived Addresses - PDAs]
+                ConfigPDA["Global Config PDA ['config']"]
+                VaultPDA["User Vault PDA ['vault', owner, mint]"]
+                EscrowTokenPDA["Token Escrow Vault PDA ['escrow', vault_pda]"]
+                StreamPDA["Stream Flow PDA ['stream', vault_pda, recipient]"]
+            end
+        end
+
+        subgraph CPI_Target_Programs [External On-Chain Invocation Engine]
+            SPLToken[SPL Token / Token-2022 Program]
+            PythProgram[Pyth Network Pull/Push Oracle]
+            SystemProgram[Solana System Program]
+        end
+    end
+
+    %% Client Interactions
+    User -->|Initialize / Deposit / Open Stream| Router
+    Keeper -->|Crank Settlement / Execute Liquidation| Router
+    Admin -->|Emergency Pause / Update Thresholds| Router
+
+    %% Internal Program Pipeline
+    Router --> Auth
+    Auth --> Reentrancy
+    Reentrancy --> TimeCheck
+    TimeCheck --> OracleGuard
+
+    OracleGuard -->|Checked State| StreamEngine
+    OracleGuard -->|Checked State| LiquidationEngine
+    OracleGuard -->|Checked State| YieldRebalancer
+
+    %% State Read/Write
+    StreamEngine <-->|Read / Mutate Rates| StreamPDA
+    LiquidationEngine <-->|Verify Invariants / Seize| VaultPDA
+    ConfigPDA -.->|Global Parameters| Core_Engine
+
+    %% Cross-Program Invocations
+    YieldRebalancer -->|CPI: TransferChecked / MintTo| SPLToken
+    LiquidationEngine -->|CPI: Liquidate to Keeper| SPLToken
+    OracleGuard -->|CPI / Read Price Data| PythProgram
+    Auth -->|PDA Space Allocation| SystemProgram
+    SPLToken <-->|Lock / Release Tokens| EscrowTokenPDA
+
+    %% Style mappings
+    classDef client fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef program fill:#0f172a,stroke:#818cf8,stroke-width:2px,color:#fff;
+    classDef engine fill:#312e81,stroke:#a5b4fc,stroke-width:1px,color:#fff;
+    classDef pda fill:#064e3b,stroke:#34d399,stroke-width:1px,color:#fff;
+    classDef ext fill:#451a03,stroke:#fb923c,stroke-width:1px,color:#fff;
+
+    class User,Keeper,Admin client;
+    class Router,Auth,Reentrancy,TimeCheck,OracleGuard program;
+    class StreamEngine,LiquidationEngine,YieldRebalancer engine;
+    class ConfigPDA,VaultPDA,EscrowTokenPDA,StreamPDA pda;
+    class SPLToken,PythProgram,SystemProgram ext;

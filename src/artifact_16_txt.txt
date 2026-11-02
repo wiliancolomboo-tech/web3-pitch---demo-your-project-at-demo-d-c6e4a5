@@ -1,0 +1,6 @@
+Built for resilience. Proven in tests with 100% assertion coverage. Ready for turnkey institutional deployment.
+
+Inspect the code & verified Devnet program now:
+🔗 github.com/varta-protocol/varta-core
+
+Special thanks to Kyiv Demo Day organizers & the global @solana developer community. Let’s build what matters! ⚡🛡️

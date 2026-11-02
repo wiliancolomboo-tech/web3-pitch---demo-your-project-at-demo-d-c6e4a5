@@ -1,0 +1,6 @@
+PROGRAM_ID=S1chGuaRd1111111111111111111111111111111111
+SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLANA_WS_URL=wss://api.devnet.solana.com
+RESEND_API_KEY=re_123456789_abcdefg
+NOTIFICATION_EMAIL=leads@kyivdemoday.ua
+WAR_ROOM_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder

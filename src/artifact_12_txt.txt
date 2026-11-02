@@ -1,0 +1,4 @@
+Why @solana?
+⚡ 400ms slot times deliver instant field relief to citizens during municipal grid disruptions
+🛡️ Keccak-256 Merkle proofs eliminate Sybil & double-claim attacks
+🔗 Real-time enterprise integrations route cryptographic receipts to @resend & Slack incident ops in real-time

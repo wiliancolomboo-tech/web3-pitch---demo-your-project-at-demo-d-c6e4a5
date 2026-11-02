@@ -1,0 +1,74 @@
+================================================================================
+AETHERIS PROTOCOL - 2-MINUTE KYIV DEMO DAY PRESENTATION SCRIPT
+================================================================================
+
+[00:00 - 00:20] THE HOOK & SYSTEM BREAKDOWN
+VISUAL:
+  Slide 1: High-energy title card "Aetheris Protocol: Sub-50ms JIT Intent Settlement on Solana".
+  Camera switches to speaker; screen-in-screen shows live terminal running `anchor test`.
+
+SPEAKER (00:00):
+  "Judges, fellow builders, and Kyiv Demo Day guests: Solana is the fastest L1 in existence, 
+  yet every day, retail traders lose millions to toxic MEV sandwiches, while passive LPs bleed 
+  from impermanent loss on static AMM pools. 
+  Meet Aetheris: the high-frequency intent routing engine that replaces passive AMM pools with 
+  Just-In-Time dynamic flash liquidity, powered by Anchor 0.30 and Token-2022."
+
+[00:20 - 00:50] THE ARCHITECTURAL EDGE
+VISUAL:
+  Screen displays Mermaid Architecture diagram; highlighting the Creator PDA, Escrow PDA, 
+  and the Filler's JIT atomic injection.
+
+SPEAKER (00:21):
+  "Instead of executing blind AMM swaps through multi-hop liquidity paths that burn 250,000 CUs, 
+  Aetheris users post parameterized trade intents. 
+  Notice how the intent's dynamic Dutch curve linearly decays on-chain per slot. 
+  Keepers and market makers compete in millisecond off-chain auctions to provide flash liquidity 
+  directly into our on-chain escrow program.
+  Total compute cost? Less than 47,000 Compute Units. That is an 80% reduction in CU footprint 
+  compared to existing Solana perp and swap protocols."
+
+[00:50 - 01:25] LIVE TECHNICAL DEMO
+VISUAL:
+  Terminal recording.
+  `anchor test -- --nocapture` runs.
+  Five tests light up bright green:
+    ✔ 1. Successfully initializes protocol configuration
+    ✔ 2. Creates an intent with escrow PDA funding
+    ✔ 3. Executes JIT Flash Settlement of Intent with Dutch decay & fee split
+    ✔ 4. Prevents double-filling of an already filled intent
+    ✔ 5. Creates and cancels unfilled intent with 100% refund
+
+SPEAKER (00:51):
+  "Let's look at the live runtime tests. 
+  In Test 2, the user deposits 1,000 tokens into an escrow PDA derived from their pubkey and a discrete nonce.
+  In Test 3, the keeper triggers `fill_intent_jit`. 
+  The protocol executes an atomic three-way split in a single Solana transaction:
+  First, the taker receives their requested assets with zero slippage.
+  Second, the protocol fee receiver takes a 30-basis-point yield.
+  Third, the escrow unlocks directly to the filler using cryptographic signer seeds.
+  Notice Test 4: When a searcher attempts a double-spend replay attack, the program rejects it instantly 
+  via anchor enum state validation."
+
+[01:25 - 01:45] WHY AETHERIS WINS 1ST PLACE
+VISUAL:
+  Slide 3: Comparison Matrix: Aetheris vs. UniswapX vs. CoW Swap vs. Raydium CLMM.
+  Key metrics: 46k CU, Native Token-2022 support, Zero toxic order flow, Instant JIT fill.
+
+SPEAKER (01:26):
+  "Why does Aetheris win today?
+  1. We are production-ready: Complete with strict PDA constraints, checked arithmetic, and zero-copy optimization.
+  2. We leverage native Token-2022 transfer fee extensions and Pyth price staleness checks.
+  3. We solve the liquidity crisis: Market makers get guaranteed deterministic settlement, and takers get 
+  zero-slippage fills."
+
+[01:45 - 02:00] CLOSING CALL TO ACTION
+VISUAL:
+  Slide 4: GitHub QR Code, Devnet Program ID, and Kyiv Demo Day Badge.
+
+SPEAKER (01:46):
+  "Aetheris transforms Solana from a playground for sandwich bots into an institutional-grade, 
+  zero-slippage capital market. 
+  The contracts are verified, our SDK is open-source, and our devnet deployment is live. 
+  Thank you, Kyiv, and let's build the future of finance on Solana!"
+================================================================================
