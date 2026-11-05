@@ -10,7 +10,7 @@ solana program deploy target/deploy/tryzub_stream.so \
 cat <<EOF > .env
 SOLANA_RPC_URL=https://api.devnet.solana.com
 PROGRAM_ID=$(solana address -k target/deploy/tryzub_stream-keypair.json)
-RESEND_API_KEY=re_1234567890abcdef
+RESEND_API_KEY=re_test_000000000000000000000000
 ENTERPRISE_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 AUDIT_EMAIL=treasury@kyiv.reconstruct.ua
 EOF

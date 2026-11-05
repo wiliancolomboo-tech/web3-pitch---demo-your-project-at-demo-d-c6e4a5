@@ -1,6 +1,6 @@
 SOLANA_RPC_HTTP=https://api.devnet.solana.com
 SOLANA_RPC_WS=wss://api.devnet.solana.com
-RESEND_API_KEY=re_KyivDemoDay_SponsorSecretKey998
+RESEND_API_KEY=re_test_000000000000000000000000
 DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 AUDIT_EMAIL_RECIPIENT=audits@kyiv-demoday.ua

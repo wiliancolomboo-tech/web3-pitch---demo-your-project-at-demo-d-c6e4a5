@@ -4,7 +4,7 @@ SOLANA_WS_URL=wss://api.devnet.solana.com
 PROGRAM_ID=KLYUChQ1zB6yRmsXvS6vEaKx9sVfT4qD3r8qgRzG32A
 
 # Enterprise Webhook & Dispatch Tokens
-RESEND_API_KEY=re_demo_kyiv_123456789
+RESEND_API_KEY=re_test_000000000000000000000000
 NOTIFICATION_RECIPIENT_EMAIL=judges@solana-kyiv-demoday.org
 DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder

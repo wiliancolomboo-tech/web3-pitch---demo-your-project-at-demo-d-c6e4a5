@@ -2,5 +2,5 @@ PORT=8080
 SOLANA_RPC_URL=https://api.devnet.solana.com
 PROGRAM_ID=Tremb1taPayKy1vDemoDay111111111111111111111
 SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
-RESEND_API_KEY=re_123456789_abcdefghijklmnopqrstuvwxyz
+RESEND_API_KEY=re_test_000000000000000000000000
 AUDITOR_EMAIL=kyiv-audit@trembitapay.ua

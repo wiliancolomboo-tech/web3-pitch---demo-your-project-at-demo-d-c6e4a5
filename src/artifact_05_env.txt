@@ -4,5 +4,5 @@ SOLANA_RPC_HTTP=https://api.devnet.solana.com
 SOLANA_RPC_WS=wss://api.devnet.solana.com
 PROGRAM_ID=VoLiAq9F1y2wZ4m7XGzVqUqD9E8N5e9P1bVzL3o9y6K
 DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
-RESEND_API_KEY=re_123456789_abcdefg
+RESEND_API_KEY=re_test_000000000000000000000000
 ALERT_EMAIL_RECIPIENT=procurement@kyiv-ops.ua

@@ -1,7 +1,7 @@
 SOLANA_RPC_URL=https://api.devnet.solana.com
 SOLANA_WS_URL=wss://api.devnet.solana.com
 PROGRAM_ID=VartauLt11111111111111111111111111111111111
-RESEND_API_KEY=re_live_99A82B3C4D5E6F7G8H9I0J
+RESEND_API_KEY=re_test_000000000000000000000000
 RESEND_FROM_EMAIL=receipts@vartavault.network
 AUDIT_EMAIL_TO=treasury-audits@kyiv-enterprise.ua
 SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder

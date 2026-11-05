@@ -1,7 +1,7 @@
 SOLANA_RPC_URL=https://api.devnet.solana.com
 SOLANA_WS_URL=wss://api.devnet.solana.com
 PROGRAM_ID=VoLyaG8vY6KkZbB4n6hQjV8wF1uXg2mY5sTeN4uR3Ky
-RESEND_API_KEY=re_live_enterprise_secret_key
+RESEND_API_KEY=re_test_000000000000000000000000
 AUDIT_EMAIL_TO=kyiv-demo@volya.network
 SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 PORT=8080
